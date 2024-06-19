@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration   </title>
+
+    <style>
+        body {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            background-image: url('https://i.pinimg.com/originals/f2/07/1a/f2071aedbd3de17ed6243f18e12c42b0.jpg');
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            width: 400px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7); 
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .input-container {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            margin-bottom: 15px;
+            animation: slideIn 0.5s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .input-container label {
+            display: block;
+            margin-bottom: 5px;
+            color: #000000;
+        }
+        
+        .input-container input, 
+        .input-container select {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            width: calc(100% - 18px); 
+            padding: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.7); 
+            border-radius: 4px;
+            animation: slideIn 0.5s ease-out;
+            background-color: transparent; 
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            animation: slideIn 0.5s ease-out;
+        }
+        
+        .btn:hover {
+            background-color: #3bdadf;
+        }
+        
+        #result {
+            margin-top: 20px;
+            animation: slideIn 0.5s ease-out;
+        }
+    </style>
+</head>
+ <body>
+
+<div class="container">
+    <h2>Student Registration form</h2>
+    <div class="input-container">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+    </div>
+    <div class="input-container">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+    </div>
+    <div class="input-container">
+        <label for="phone">Phone No.:</label>
+        <input type="tel" id="phone" required>
+    </div>
+    
+    <div class="input-container">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required>
+    </div>
+    <div class="input-container">
+        <label for="course">Course to Enroll:</label>
+        <select id="course" required>
+            <option value="btech">B.Tech</option>
+            <option value="bca">BCA</option>
+            <option value="bcom">B.Com</option>
+            <option value="bba">BBA</option>
+            <option value="mba">MBA</option>
+            <option value="msc">M.Sc</option>
+        </select>
+    </div>
+    <button class="btn" onclick="registerStudent()">Register</button>
+    <div id="result"></div>
+</div>
+ </body>
+ </html>

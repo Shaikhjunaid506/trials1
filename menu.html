@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu-Based Program</title>
+    <style>
+        body {
+            background-image: url('https://images5.alphacoders.com/114/thumb-1920-1145048.png');
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #666464;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            max-width: 600px;
+            background-color: #0e0c0c(0, 0, 0, 0.1);
+            opacity: 0.1s;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 30px;
+            color: #a8a8a8;
+        }
+        .options {
+            display: none;
+            margin-top: 30px;
+        }
+        .options.active {
+            display: flex;
+            justify-content: center;
+        }
+        .options button {
+
+            background-color: #787474;
+            opacity: 0.3s;
+            margin: 0 10px;
+            padding: 15px 40px;
+            
+            color: #cfcfcf;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .options button:hover {
+            background-color: #1d1c1c;
+        }
+        .choose-type-btn {
+            background-color: #787474;
+            margin-bottom: 30px;
+            padding: 15px 40px;
+            
+            opacity: 0.2s;
+            color: #b9b9b9;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family:Georgia, 'Times New Roman', Times, serif ;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        .choose-type-btn:hover {
+            background-color: #686868;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+        <h1>HOT-WHEELZ</h1>
+        <button class="choose-type-btn" onclick="showOptions()">Choose Your Wheels</button>
+        <div id="options" class="options">
+            <button class="bikes-link" onclick="window.location.href='https://www.bikewale.com/'">2-Wheel</button>
+            <button class="cars-link" onclick="window.location.href='https://www.carwale.com/'">4-wheel</button>
+        </div>
+    </div>
+
+    <script>
+        function showOptions() {
+            const options = document.getElementById('options');
+            options.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
